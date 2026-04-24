@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "funasr-batch-studio"
+version = "0.1.0"
+description = "Desktop batch transcription studio for long-form audio and video using FunASR."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "OpenAI Codex + project owner" }
+]
+keywords = ["asr", "funasr", "transcription", "pyside6", "desktop"]
+dependencies = [
+  "PySide6>=6.7",
+  "funasr>=1.3.1",
+  "torch>=2.6.0",
+  "torchaudio>=2.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+funasr-batch-studio = "funasr_gui.app:launch"
+funasr-batch-studio-cli = "funasr_gui.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["funasr_gui*"]
