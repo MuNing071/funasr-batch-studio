@@ -86,7 +86,10 @@ The app is split into small layers:
 - `funasr_gui/core/presets.py`: curated model presets
 - `funasr_gui/gui/main_window.py`: desktop UI
 
-More detail is in `docs/ARCHITECTURE.md`.
+More detail is in:
+
+- `docs/ARCHITECTURE.md`
+- `docs/AGENT_HANDOFF.md`
 
 ## Privacy and compliance posture
 
